@@ -1,0 +1,39 @@
+body{
+    margin: 0;
+    padding: 0;
+ background-color: rgb(57, 74, 119);
+ color: white;
+ font-family: 'Montserrat', sans-serif;
+}
+h1{
+    text-align: center;
+    padding-top: 10%;
+
+}
+h2{
+    text-align: center;
+}
+.img{
+    height: 300px;
+    width: 300px;
+    
+}
+.gi{
+    display: grid;
+    place-items: center;
+}
+.btn{
+    display: grid;
+    place-items: center;
+}
+.contact{
+    width: 100px;
+    height: 30px;
+    background-color: rgb(100, 207, 237);
+    border-radius: 1.5rem;
+    border-width: 0;
+}
+a{
+    text-decoration: none;
+    color: black;
+}

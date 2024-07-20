@@ -1,0 +1,62 @@
+body {
+    font-size: 16px; /* Adjust font size for better readability */
+}
+
+.label {
+    font-size: 1rem; /* Set label font size */
+    margin-bottom: 0.5rem; /* Add spacing between label and input */
+}
+
+.inp {
+    font-size: 1rem;
+    padding: 0.5rem; /* Add padding for better input field appearance */
+    border-radius: 0.2rem;
+    outline: none; /* Remove outline on focus */
+    border: 1px solid #ccc; /* Add border for input fields */
+    width: calc(100% - 1rem); /* Make input fields occupy remaining width */
+}
+
+button {
+    font-size: 1rem;
+    border-radius: 0.4rem;
+    background-color: rgb(92, 212, 122);
+    color: white;
+    padding: 0.5rem 1rem; /* Add padding to button */
+    border: none; /* Remove border */
+    cursor: pointer; /* Add cursor pointer on hover */
+    transition: background-color 0.3s ease; /* Add transition effect */
+}
+
+button:hover {
+    background-color: rgb(72, 192, 102); /* Change background color on hover */
+}
+
+.form-submit {
+    padding-top: 2rem; /* Adjust spacing above the button */
+}
+
+#paymentForm {
+    width: 80%;
+    max-width: 600px; /* Limit maximum width of the form */
+    background-color: #f9f9f9; /* Change background color */
+    display: grid;
+    place-items: center;
+    border-radius: 0.3rem;
+    padding: 2rem; /* Add padding inside the form */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+    margin: 0 auto; /* Center the form horizontally */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column; /* Arrange label and input vertically */
+    margin-bottom: 1.5rem; /* Adjust spacing between form groups */
+}
+
+.form-group input {
+    width: 100%; /* Make input fields occupy full width */
+}
+
+.form-group:last-child {
+    margin-bottom: 0; /* Remove bottom margin for the last form group */
+}

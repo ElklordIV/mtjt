@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="stylesheet" href="building.css">
+    <link rel="stylesheet" href="payment.css">
+    <script src="scriptBuild.js"></script>
+    
+    <script src="payment.js"></script>
+    <script src="server.js"></script>
+</head>
+<body>
+    
+ <header class="header">
+    <h1 class="logo"><a href="index.html"><img class="logo" src="images/Screenshot 2024-05-20 204655.png" alt=""></a></h1>
+  <ul class="main-nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+  </ul>
+</header> 
+<h1 class="build">
+    
+  <h3 class="tag">
+    Please fill in your information so we can contact you and for delivery purposes
+ </h3>
+<h3 class="dele">Please note all sales include a standard delivery fee of R60</h3>
+ 
+<form id="paymentForm">
+  <div class="form-group">
+      <label class="label" for="email-address">Email</label>
+      <input class="inp" type="email" id="email-address" placeholder="email-address" required />
+  </div>
+  <div class="form-group">
+      <label class="label" for="first-name">First Name</label>
+      <input class="inp" type="text" id="first-name" placeholder="first-name" required />
+  </div>
+  <div class="form-group">
+      <label class="label" for="last-name">Last Name</label>
+      <input class="inp" type="text" id="last-name" placeholder="last-name" required />
+  </div>
+  <div class="form-group">
+      <label class="label" for="street">Street</label>
+      <input class="inp" type="text" id="street" name="street" placeholder="Street Address">
+  </div>
+  <div class="form-group">
+      <label class="label" for="city">City</label>
+      <input class="inp" type="text" id="city" name="city" placeholder="City">
+  </div>
+  <div class="form-group">
+      <label class="label" for="state">Province</label>
+      <input class="inp" type="text" id="state" name="state" placeholder="Province" required>
+  </div>
+  <div class="form-group">
+      <label class="label" for="zip">Zip Code</label>
+      <input class="inp" type="text" id="zip" name="zip" placeholder="ZIP Code">
+  </div>
+  <div class="form-group">
+      <label class="label" for="country">Country</label>
+      <input class="inp" type="text" id="country" name="country" placeholder="Country" required>
+  </div>
+  <div class="form-submit">
+      <button type="submit" id="submitFormButton">See payment options</button>
+  </div>
+</form>
+
+
+<!-- <div class="cart-items" id="cartItems">Cart Items</div>-->
+
+<div class="cart-total">
+  <strong class="cart-total-title">Total</strong>
+  <span class="cart-total-price" id="amount"></span> <!-- Placeholder for total price -->
+</div>
+<!--<div class="form-submit">
+  <button type="button" onclick="payWithPaystack(event)">Pay</button>
+</div>
+-->
+<script src="payment.js"></script>
+  <script src="https://js.paystack.co/v1/inline.js"></script>
+
+<div class="hline"></div>
+    <footer class="footer">
+        <div class="container">
+         <div class="row">
+           <div class="footer-col">
+             <h4>CONTACT</h4>
+             <ul>
+               <li><a href="mailto:recipient@example.com?subject=Subject%20Here&body=Your%20Message%20Here">EMAIL</a></li>
+             </ul>
+           </div>
+           <div class="footer-col">
+             <h4>ABOUT</h4>
+             <ul>
+               <li><a href="#">WHO ARE WE</a></li>
+               <li><a href="#">WHY SHOP WITH US</a></li>
+               <li><a href="#">HISTORY</a></li>
+             </ul>
+           </div>
+           <div class="footer-col">
+             <h4>SERVICES</h4>
+             <ul>
+               <li><a href="#">DELIVERIES</a></li>
+               <li><a href="#">RETURN POLICY</a></li>
+               <li><a href="#">WARRANTY</a></li>
+              
+             </ul>
+           </div>
+           <div class="footer-col">
+             <h4>MTGT GROUP STORE</h4>
+             <div class="social-links">
+               <a href="#"><i class="fab fa-facebook-f"><img class="soci" src="images/facebook_1051309.png" alt=""></i></a>
+               <a href="#"><img src="images/linkedin_254394.png" alt="" class="soci"><i class="fab fa-twitter"></i></a>
+               <a href="#"><i class="fab fa-instagram"><img src="images/icons8-instagram-50.png" alt="" class="soci"></i></a>
+               <a href="#"><i class="fab fa-linkedin-in"><img src="images/video-play_9302291.png" alt="" class="soci"></i></a>
+             </div>
+           </div>
+         </div>
+        </div>
+     </footer>
+</div>
+</body>
+</html>

@@ -351,3 +351,25 @@ a {
       padding-bottom: 0%; /* Ensure space at the bottom */
   }
 }
+.banner{
+  display: flex;
+  justify-content: center;
+  background-color: #EC0318;
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.bannerImg{
+align-items: center;
+width: 100%;
+}
+.bannerInfo{
+  color: white;
+  font-size: 3vh;
+  padding-left: 20%;
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translate(-50%, -50%);
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}

@@ -1,62 +1,106 @@
-body {
-    font-size: 16px; /* Adjust font size for better readability */
+/* Payment Page Styles */
+#paymentPage {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f1f1f1;
 }
 
-.label {
-    font-size: 1rem; /* Set label font size */
-    margin-bottom: 0.5rem; /* Add spacing between label and input */
-}
-
-.inp {
-    font-size: 1rem;
-    padding: 0.5rem; /* Add padding for better input field appearance */
-    border-radius: 0.2rem;
-    outline: none; /* Remove outline on focus */
-    border: 1px solid #ccc; /* Add border for input fields */
-    width: calc(100% - 1rem); /* Make input fields occupy remaining width */
-}
-
-button {
-    font-size: 1rem;
-    border-radius: 0.4rem;
-    background-color: rgb(92, 212, 122);
-    color: white;
-    padding: 0.5rem 1rem; /* Add padding to button */
-    border: none; /* Remove border */
-    cursor: pointer; /* Add cursor pointer on hover */
-    transition: background-color 0.3s ease; /* Add transition effect */
-}
-
-button:hover {
-    background-color: rgb(72, 192, 102); /* Change background color on hover */
-}
-
-.form-submit {
-    padding-top: 2rem; /* Adjust spacing above the button */
+#paymentPage h3 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
 }
 
 #paymentForm {
-    width: 80%;
-    max-width: 600px; /* Limit maximum width of the form */
-    background-color: #f9f9f9; /* Change background color */
     display: grid;
-    place-items: center;
-    border-radius: 0.3rem;
-    padding: 2rem; /* Add padding inside the form */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
-    margin: 0 auto; /* Center the form horizontally */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
 }
 
 .form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.form-group .inp {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.details {
+    margin-top: 30px;
     display: flex;
-    flex-direction: column; /* Arrange label and input vertically */
-    margin-bottom: 1.5rem; /* Adjust spacing between form groups */
+    flex-direction: column;
+    gap: 20px;
 }
 
-.form-group input {
-    width: 100%; /* Make input fields occupy full width */
+@media (min-width: 768px) {
+    .details {
+        flex-direction: row;
+    }
 }
 
-.form-group:last-child {
-    margin-bottom: 0; /* Remove bottom margin for the last form group */
+.delivery-type, .cart-details {
+    flex: 1;
+}
+
+.delivery-type h2, .cart-details h2 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #333;
+}
+
+.delivery-type select.inp {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+#cartItems {
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+#total {
+    text-align: right;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+#total #amount {
+    font-size: 18px;
+    color: #d9534f;
+}
+
+#seePaymentOptions {
+    background-color: #5cb85c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+#seePaymentOptions:hover {
+    background-color: #4cae4c;
 }

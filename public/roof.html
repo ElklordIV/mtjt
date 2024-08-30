@@ -4,14 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Roof</title>
-    <link rel="stylesheet" href="building.css">
-    <script src="scriptBuild.js"></script>
-    <script src="/server.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="/api/products/roof.js"></script>
+
+
 </head>
 <body>
  <header class="header">
-    <h1 class="logo"><a href="index.html"><img class="logo" src="images/Screenshot 2024-05-20 204655.png" alt=""></a></h1>
-  <ul class="main-nav">
+    <h1 class="logo"><a href="index.html"><img class="logo" src="images/test.png" alt=""></a></h1>
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search for products...">
+      <button onclick="searchProducts()">Search</button>
+  </div>
+    <ul class="main-nav">
       <li><a href="index.html">Home</a></li>
       <li><a href="#">Services</a></li>
       <li><a href="#">About</a></li>
@@ -19,57 +24,56 @@
   </ul>
 </header> 
 <h1 class="build">
-   Focus Roof
+   SAMSUNG
 </h1>
 <h3 class="tag">
-    All YOUR ROOF NEEDS IN ONE PLACE
+  Inspire the World, Create the future
 </h3>
+<div class="banner">
+  <img class="bannerImg" src="images/samsungBanner.png" alt="">
+  <div class="bannerInfo1">New 49" SAMSUNG Odesssy Neo G9 Monitor <br> <button class="learn">Learn More</button></div>
+</div>
+  <div class="grid-container">
+    <div class="grid-item">
+        <a href="samsungLaptops.html"> 
+                       <img src="images/laptop (1).png" alt="Image 1">
+        <p>Laptops</p></a>
+
+    </div>
+    <div class="grid-item">
+      <a href="samsungMonitors.html">   
+             <img src="images/monitor.png" alt="Image 2">
+        <p>Monitor's</p></a>
+
+    </div>
+    <div class="grid-item"><a href="samsungPhones.html">       
+       <img src="images/smartphone.png" alt="Image 3">
+        <p>Smartphones</p></a>
+
+    </div>
+</div>
+
+</div>
 <div class="bod">
-    <div class="busket"><div id="cart">
+    <div class="busket">
+      <div id="cart">
         <h2>Your Cart</h2>
         <ul id="cartItems"></ul>
         <p id="totalPrice">Total: R0.00</p>
         <button class="Ccart" onclick="clearCart()">Clear Cart</button>
         <button class="Chec" onclick="checkout()">Continue to Checkout</button>
-    </div></div>
-    <div class="containerG">
-    <div class="group">
-        <div class="propi"><img class="propi" src="images/Screenshot 2024-05-25 121029.png" alt=""></div>
-        <h3 class="label">Macsteel IBR</h3>
-        <h4 class="info">Galvanized Roof Sheet (0.4m x 6000mm)</h4>
-        <h2 class="price">R699.99</h2>
-        <button class="cartB" onclick="addToCart(this)">ADD TO CART</button>
+    </div></div></div>
+
+    <main>
+      <section id="roofProducts">
+          <div id="productList" class="containerG"></div> <!-- Products will be loaded here -->
+      </section>
+  </main>
+  <a href="productDetails.html?id=PRODUCT_ID">
+    <div class="product">
+      <!-- Product content -->
     </div>
-    <div class="group">
-        <div class="propi"><img class="propi" src="images/Screenshot 2024-05-25 121044.png" alt=""></div>
-        <h3 class="label">Corrugated Iron</h3>
-        <h4 class="info">Corrugated Iron Roof Sheet (2400 x 0.47mm)</h4>
-        <h2 class="price">R349.99</h2>
-        <button class="cartB" onclick="addToCart(this)">ADD TO CART</button>
-    </div>
-    <div class="group">
-        <div class="propi"><img class="propi" src="images/Screenshot 2024-05-25 121055.png" alt=""></div>
-        <h3 class="label">Macsteel IBR</h3>
-        <h4 class="info">Roof Sheet (5400 x 0.47mm)</h4>
-        <h2 class="price">R699.99</h2>
-        <button class="cartB" onclick="addToCart(this)">ADD TO CART</button>
-    </div>
-    <div class="group">
-        <div class="propi"><img class="propi" src="images/Screenshot 2024-05-25 121244.png" alt=""></div>
-        <h3 class="label">Eureka</h3>
-        <h4 class="info">75mm Wire Nails (450g)</h4>
-        <h2 class="price">R39.99</h2>
-        <button class="cartB" onclick="addToCart(this)">ADD TO CART</button>
-    </div>
-    <div class="group">
-        <div class="propi"><img class="propi" src="images/Screenshot 2024-05-25 121259.png" alt=""></div>
-        <h3 class="label">Eureka</h3>
-        <h4 class="info">75mm Wire Nails (450g)</h4>
-        <h2 class="price">R39.99</h2>
-        <button class="cartB" onclick="addToCart(this)">ADD TO CART</button>
-    </div>
-</div>
-</div>
+  </a>
   <!--
 <form action="/checkout" method="POST">
    Billing Address Fields -->

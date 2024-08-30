@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Product</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <header>   
+        <h1>Add Product</h1>
+       <nav>
+           <ul>
+               <li><a href="adminAddProduct.html">Add New Product</a></li>
+               <li><a href="adminSearchOrder.html">Search Orders</a></li>
+               <li><a href="/">Go Home</a></li>
+           </ul>
+       </nav>
+   
+   </header>
+    <main>
+        <section>
+            <form id="addProductForm">
+                <label for="label">Product Label:</label>
+                <input type="text" id="label" name="label" required>
+                
+                <label for="info">Product Info:</label>
+                <input type="text" id="info" name="info" required>
+                
+                <label for="price">Price:</label>
+                <input type="number" id="price" name="price" step="0.01" required>
+                
+                <label for="imageUrl">Image URL:</label>
+                <input type="text" id="imageUrl" name="imageUrl" required>
+                
+                <button type="submit">Add Product</button>
+            </form>
+        </section>
+    </main>
+    <script src="admin.js"></script>
+</body>
+</html>

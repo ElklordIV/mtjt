@@ -5,70 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="scriptBuild.js"></script>
-    <script src="/server.js"></script>
+    <script defer src="/api/products/index.js"></script>
+
 </head>
 <body>
 
  <header class="header">
-    <h1 class="logo"><a href="index.html"><img class="logo" src="images/Screenshot 2024-05-20 204655.png" alt=""></a></h1>
+    <h1 class="logo"><a href="index.html"><img class="logo" src="images/test.png" alt=""></a></h1>
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search for products...">
+      <button onclick="searchProducts()">Search</button>
+  </div>
   <ul class="main-nav">
       <li><a href="index.html">Home</a></li>
+      <li><a href="login.html">Admin</a></li>
+     <!-- <li><a href="signUpCustomer.html">MyAccount</a></li>
+      </-->
       <li><a href="#">Services</a></li>
       <li><a href="#">About</a></li>
       <li><a href="#">Contact</a></li>
   </ul>
 </header> 
+
 <div class="heading">
-    <h1>MTJT GROUP STORE</h1>
+    <h1>WHITE-CAT TECHNOLOGIES</h1>
     <p>SERVICES THAT BRIGHTEN YOUR PATH</p>
 </div>
 <div class="promotion">
     <a href=""><img class="promo" src="images/promo.png" alt=""></a>
 </div>
 <div class="menu">
-    <div class="men"><a href="building.html"><img class="men1" src="images/R.jpg" alt=""></a><h4>BUILDING MATERIALS</h4></div>
-    <div class="men"><a href="roof.html"><img class="men1" src="images/R (1).jpg" alt=""></a><H4>ROOFING</H4></div>
-    <div class="men"><a href="tools.html"><img class="men1" src="images/R (2).jpg" alt=""></a><H4>TOOLS</H4></div>
-    <div class="men"><a href=""><img class="men1" src="images/mtjt logo_.jpg" alt=""></a><H4>DELIVERIES</H4></div>
+    <div class="men"><a href="building.html"><img class="men1" src="images/MeccerL.png" alt=""></a><h4 class="brand">Meccer</h4></div>
+    <div class="men"><a href="roof.html"><img class="men1" src="images/R (1).jpg" alt=""></a><H4 class="brand">Samsung
+    </H4></div>
+    <div class="men"><a href="tools.html"><img class="men1" src="images/R (2).jpg" alt=""></a><H4 class="brand">Lenovo</H4></div>
+    <div class="men"><a href=""><img class="men1" src="images/mtjt logo_.jpg" alt=""></a><H4 class="brand">DELIVERIES</H4></div>
 </div>
 <div class="busket"><div id="cart">
   <h2 class="ca">Your Cart</h2>
   <ul id="cartItems"></ul>
   <p id="totalPrice">Total: R0.00</p>
   <button class="Ccart" onclick="clearCart()">Clear Cart</button>
-  <button class="Chec" onclick="checkout()">Continue to Checkout</button>
+  <button id="checkoutButton" class="Chec" onclick="checkout()">Continue to Checkout</button>
 </div></div>
-<h5>PREMEUM CEMENT AT BEST PRICES</h5>
-<div class="cemn">
-  <div class="group">
-    <div class="cemopt"><a href=""><img src="images/Screenshot 2024-05-15 145436.png" alt="" class="cem"></a><h6 class="label">PPC SUREBUILD</h6><h3 class="info">42.5N CEMENT(50KG)</h3><h2 class="price">R99.99</h2>
-      <button class="cartB" onclick="addToCart(this)">ADD TO CART</button>
-    </div></div>
-    <div class="group">
-<div class="cemopt"><a href=""><img src="images/cement-npc-black-50kg-425n.jpg" alt="" class="cem"></a><H6 class="label">CEMENT NPC BLACK</H6><h3 class="info">42.5N CEMENT(50KG)</h3><h2 class="price">R99.99</h2>
-  <button class="cartB" onclick="addToCart(this)">ADD TO CART</button>
-</div></div>
-<div class="group">
-<div class="cemopt"><a href=""><img src="images/product-card_img-5@2x-1.webp" alt="" class="cem"></a><H6 class="label">AFRISAM STARBUILD CEMENT</H6><h3 class="info">42.5N CEMENT(50KG)</h3><h2 class="price">R99.99</h2> <button class="cartB" onclick="addToCart(this)">ADD TO CART</button></div></div>
-<div class="group">
-<div class="cemopt"><a href=""><img src="images/R.png" alt="" class="cem"></a><H6 class="label">SEPHAKU CEMENT</H6><h3 class="info">42.5N CEMENT(50KG)</h3><h2 class="price">R99.99</h2> <button class="cartB" onclick="addToCart(this)">ADD TO CART</button></div></div>
-</div>
-<h5>ON PROMOTION</h5>
 
-<div class="pro">
-  <div class="group">
-    <div class="pro1">
-        <a href="building.html"><img class="prom" src="images/Screenshot 2024-05-15 145857.png" alt=""></a><H6 class="label">BUILDING SAND</H6><h3 class="info">SAND FOR BUILDING</h3><h2 class="price">R599.99</h2> <button class="cartB" onclick="addToCart(this)">ADD TO CART</button>
-    </div></div>
-    <div class="group">
-    <div class="pro2">
-        <div class="pro3">
-            <a href=""><img class="pr3" src="images/Screenshot 2024-05-15 150019.png" alt=""></a><H6 class="label">TIMBER</H6><h3 class="info">TIMBER WOOD/ PER PALETTE</h3><h2 class="price">R39.99</h2> <button class="cartB" onclick="addToCart(this)">ADD TO CART</button></div></div>
-            <div class="group">
-        <div class="pro3"><a href=""><img class="" src="images/Screenshot 2024-05-15 150159.png" alt=""></a><H6 class="label">PLASTIC SHEETING</H6><h3 class="info">Plastic sheeting (1000mm x 30mm)</h3><h2 class="price">R379.99</h2> <button class="cartB" onclick="addToCart(this)">ADD TO CART</button></div></div>
-    </div>
-</div>
+<main>
+  <div id="productList"></div>
+
+</main>
+
+<a href="productDetails.html?id=PRODUCT_ID">
+  <div class="product">
+    <!-- Product content -->
+  </div>
+</a>
+
 <div class="hline"></div>
     <footer class="footer">
         <div class="container">
@@ -76,7 +67,7 @@
            <div class="footer-col">
             <h4>CONTACT</h4>
             <ul>
-              <li><a href="mailto:recipient@example.com?subject=Subject%20Here&body=Your%20Message%20Here">EMAIL</a></li>
+              <li><a href="mailto:michael@mtjt.co.za?subject=Subject%20Here&body=Your%20Message%20Here">EMAIL</a></li>
            </div>
            <div class="footer-col">
              <h4>ABOUT</h4>

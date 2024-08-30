@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Order</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <header>   
+        <h1>Search Order</h1>
+       <nav>
+           <ul>
+               <li><a href="admin.html">Add New Product</a></li>
+               <li><a href="adminSearchOrder.html">Search Orders</a></li>
+               <li><a href="/">Go Home</a></li>
+           </ul>
+       </nav>
+   
+   </header>
+    <main>
+        <section>
+            <form id="searchOrderForm">
+                <label for="paymentReference">Payment Reference:</label>
+                <input type="text" id="paymentReference" name="paymentReference" required>
+                
+                <button type="submit">Search</button>
+            </form>
+        </section>
+        <section id="orderDetails">
+            <!-- Order details will be dynamically loaded here -->
+        </section>
+    </main>
+    <script src="/api/products/admin.js"></script>
+</body>
+</html>

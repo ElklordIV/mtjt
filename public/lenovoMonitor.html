@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lenovo Monitors</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<style>
+  /* Add your spinner styles here */
+  .spinner {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      border: 4px solid rgba(0, 0, 0, 0.1);
+      border-radius: 50%;
+      border-top: 4px solid #007bff;
+      width: 40px;
+      height: 40px;
+      animation: spin 1s linear infinite;
+      display: none; /* Initially hidden */
+  }
+
+  @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+  }
+
+  /* Style for the container */
+  #product-container {
+      position: relative;
+  }
+</style>
+<body>
+    <header class="header">
+        <!-- Same header as your other pages -->
+        <header class="header">
+            <h1 class="logo"><a href="index.html"><img class="logo" src="images/test.png" alt=""></a></h1>
+          <ul class="main-nav">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+          </ul>
+        </header> 
+    </header>
+    <div class="busket"><div id="cart">
+        <h2 class="ca">Your Cart</h2>
+        <ul id="cartItems"></ul>
+        <p id="totalPrice">Total: R0.00</p>
+        <button id="clearCart" class="Ccart" onclick="clearCart()">Clear Cart</button>
+        <button id="checkoutButton" class="Chec" onclick="checkout()">Continue to Checkout</button>
+      </div></div>
+          <h1>Lenovo Monitors</h1>
+          <main>
+            <div id="product-container">
+                <div id="loading-spinner" class="spinner"></div>
+                <div id="product-list"></div>
+            </div>
+        </main>
+
+    <script src="/api/products/lenovoMonitors.js"></script>
+  
+<div class="hline"></div>
+<footer class="footer">
+    <div class="container">
+     <div class="row">
+       <div class="footer-col">
+        <h4>CONTACT</h4>
+        <ul>
+          <li><a href="mailto:michael@mtjt.co.za?subject=Subject%20Here&body=Your%20Message%20Here">EMAIL</a></li>
+       </div>
+       <div class="footer-col">
+         <h4>ABOUT</h4>
+         <ul>
+           <li><a href="#">WHO ARE WE</a></li>
+           <li><a href="#">WHY SHOP WITH US</a></li>
+           <li><a href="#">HISTORY</a></li>
+         </ul>
+       </div>
+       <div class="footer-col">
+         <h4>SERVICES</h4>
+         <ul>
+           <li><a href="#">DELIVERIES</a></li>
+           <li><a href="#">RETURN POLICY</a></li>
+           <li><a href="#">WARRANTY</a></li>
+          
+         </ul>
+       </div>
+       <div class="footer-col">
+         <h4>MTGT GROUP STORE</h4>
+         <div class="social-links">
+           <a href="#"><i class="fab fa-facebook-f"><img class="soci" src="images/facebook_1051309.png" alt=""></i></a>
+           <a href="#"><img src="images/linkedin_254394.png" alt="" class="soci"><i class="fab fa-twitter"></i></a>
+           <a href="#"><i class="fab fa-instagram"><img src="images/icons8-instagram-50.png" alt="" class="soci"></i></a>
+           <a href="#"><i class="fab fa-linkedin-in"><img src="images/video-play_9302291.png" alt="" class="soci"></i></a>
+         </div>
+       </div>
+     </div>
+    </div>
+ </footer>
+</div>
+</body>
+</html>
+
+
+    <script src="productDetails.js"></script>
+</body>
+</html>

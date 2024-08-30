@@ -4,14 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Building equipment</title>
-    <link rel="stylesheet" href="building.css">
-    <script src="scriptBuild.js"></script>
-    <script src="/server.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="/api/products/building.js"></script>
 </head>
 <body>
  <header class="header">
-    <h1 class="logo"><a href="index.html"><img class="logo" src="images/Screenshot 2024-05-20 204655.png" alt=""></a></h1>
-  <ul class="main-nav">
+    <h1 class="logo"><a href="index.html"><img class="logo" src="images/test.png" alt=""></a></h1>
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search for products...">
+      <button onclick="searchProducts()">Search</button>
+  </div>
+    <ul class="main-nav">
       <li><a href="index.html">Home</a></li>
       <li><a href="#">Services</a></li>
       <li><a href="#">About</a></li>
@@ -19,11 +22,14 @@
   </ul>
 </header> 
 <h1 class="build">
-    Building Materials
+    Powered By MECER
 </h1>
 <h3 class="tag">
-    All the building Materials in one place
+    Always Local. My Mecer, My Life.
 </h3>
+<div class="banner">
+  <img class="bannerImg" src="images/promo.png" alt="">
+</div>
 <div class="bod">
     <div class="busket"><div id="cart">
         <h2>Your Cart</h2>
@@ -32,72 +38,35 @@
         <button class="Ccart" onclick="clearCart()">Clear Cart</button>
         <button class="Chec" onclick="checkout()">Continue to Checkout</button>
     </div></div>
-    <div class="containerG">
-    <div class="group">
-        <div class="propi"><img class="propi" src="images/Screenshot 2024-05-15 150159.png" alt=""></div>
-        <h3 class="label">Plastic Sheething</h3>
-        <h4 class="info">Plastic sheeting (1000mm x 30mm)</h4>
-        <h2 class="price">R379.99</h2>
-        <button class="cartB" onclick="addToCart(this)">ADD TO CART</button>
-    </div>
-    <div class="group">
-        <div class="propi"><img class="propi" src="images/Putty.png" alt=""></div>
-        <h3 class="label">Putty Mix</h3>
-        <h4 class="info">Powafix Multi Purpose Glazing Putty (5kg)</h4>
-        <h2 class="price">R95.99</h2>
-        <button class="cartB" onclick="addToCart(this)">ADD TO CART</button>
-    </div>
-    <div class="group">
-        <div class="propi"><img class="propi" src="images/Brick con.png" alt=""></div>
-        <h3 class="label">Brick</h3>
-        <h4 class="info">Mutch Stock Concrete Brick (220 x 103 x 73mm)</h4>
-        <h2 class="price">R1.99</h2>
-        <button class="cartB" onclick="addToCart(this)">ADD TO CART</button>
-    </div>
-    <div class="group">
-        <div class="propi"><img class="propi" src="images/plastersand.png" alt=""></div>
-        <h3 class="label">Building sand</h3>
-        <h4 class="info">Building Sand (Yard Sales) (Per m³)</h4>
-        <h2 class="price">R339.99</h2>
-        <button class="cartB" onclick="addToCart(this)">ADD TO CART</button>
-    </div>
-    <div class="group">
-        <div class="propi"><img class="propi" src="images/product-card_img-5@2x-1.webp" alt=""></div>
-        <h3 class="label">Afrisam Starbuild Cement</h3>
-        <h4 class="info">42.5N CEMENT(50KG)</h4>
-        <h2 class="price">R105.00</h2>
-        <button class="cartB" onclick="addToCart(this)">ADD TO CART</button>
-    </div>
-    <div class="group">
-      <div class="propi"><img class="propi" src="images/cement-npc-black-50kg-425n.jpg" alt=""></div>
-      <h3 class="label">NPC Cement</h3>
-      <h4 class="info">42.5N CEMENT(50KG)</h4>
-      <h2 class="price">R105.00</h2>
-      <button class="cartB" onclick="addToCart(this)">ADD TO CART</button>
+   
+    <div class="grid-container">
+      <div class="grid-item">
+          <a href="mecerInv.html"> 
+                         <img src="images/ups_1699609.png" alt="Image 1">
+          <p>UPS/Inverter</p></a>
+  
+      </div>
+      <div class="grid-item">
+        <a href="mecerLaptop.html">   
+               <img src="images/1747088_laptop_computer_gadget_notebook_technology_icon.png" alt="Image 2">
+          <p>Laptops</p></a>
+  
+      </div>
+      <div class="grid-item"><a href="mecerAIO.html">       
+         <img src="images/monitor.png" alt="Image 3">
+          <p>Mini Desktops/All in one</p></a>
+  
+      </div>
   </div>
-  <div class="group">
-    <div class="propi"><img class="propi" src="images/Screenshot 2024-05-15 145436.png" alt=""></div>
-    <h3 class="label">PPC SURETECH</h3>
-    <h4 class="info">42.5N CEMENT(50KG)</h4>
-    <h2 class="price">R105.00</h2>
-    <button class="cartB" onclick="addToCart(this)">ADD TO CART</button>
-</div>
-<div class="group">
-  <div class="propi"><img class="propi" src="images/OIP.jpg" alt=""></div>
-  <h3 class="label">ECONO Cement</h3>
-  <h4 class="info">42.5N CEMENT(50KG)</h4>
-  <h2 class="price">R105.00</h2>
-  <button class="cartB" onclick="addToCart(this)">ADD TO CART</button>
-</div>
-<div class="group">
-  <div class="propi"><img class="propi" src="images/R.png" alt=""></div>
-  <h3 class="label">Sephaku Cement</h3>
-  <h4 class="info">42.5N CEMENT(50KG)</h4>
-  <h2 class="price">R105.00</h2>
-  <button class="cartB" onclick="addToCart(this)">ADD TO CART</button>
-</div>
-</div>
-</div>
+
+    <!-- Main Product List Section -->
+    <main>
+      <section id="productList">
+          <!-- Products will be dynamically loaded here -->
+      </section>
+  </main>
+
+
   <!--
 <form action="/checkout" method="POST">
    Billing Address Fields -->

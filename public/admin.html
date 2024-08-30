@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Portal</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <header>
+        <h1>Admin Portal</h1>
+        <nav>
+            <ul>
+                <li><a href="admin.html">Add New Product</a></li>
+                <li><a href="adminSearchOrder.html">Search Orders</a></li>
+                <li><a href="/">Go Home</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="addProductSection">
+            <h2>Add New Product</h2>
+            <form id="addProductForm">
+                <label for="label">Label:</label>
+                <input type="text" id="label" name="label" required>
+                <label for="info">Info:</label>
+                <input type="text" id="info" name="info" required>
+                <label for="price">Price:</label>
+                <input type="number" id="price" name="price" step="0.01" required>
+                <label for="imageUrl">Image URL:</label>
+                <input type="text" id="imageUrl" name="imageUrl" required>
+                <label for="details">Product Details:</label>
+                <textarea id="details" name="details"></textarea>
+                <label for="category">Category:</label>
+                <input type="text" id="category" name="category" required>
+                <label for="productPage">Select Page:</label>
+    <!-- Dropdown menu to select the page -->
+    <select id="page" name="page" required>
+        <option value="" disabled selected>Select Page</option>
+        <option value="index">Home Page</option>
+        <option value="building">Mecer</option>
+        <option value="tools">Lenovo</option>
+        <option value="roof">Samsung</option>
+    </select>
+                <button type="submit">Add Product</button>
+            </form>
+        
+            <h2>Edit Product</h2>
+            <div id="editProductModal" class="modal" style="display:none;">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <form id="editProductForm">
+                        <input type="hidden" id="editProductId">
+                        <label for="editLabel">Label:</label>
+                        <input type="text" id="editLabel" name="editLabel" required>
+                        <label for="editInfo">Info:</label>
+                        <input type="text" id="editInfo" name="editInfo" required>
+                        <label for="editPrice">Price:</label>
+                        <input type="number" id="editPrice" name="editPrice" step="0.01" required>
+                        <label for="editImageUrl">Image URL:</label>
+                        <input type="text" id="editImageUrl" name="editImageUrl" required>
+                        <label for="editDetails">Product Details:</label>
+                        <textarea id="editDetails" name="editDetails"></textarea>
+                        <label for="editCategory">Category:</label>
+                        <input type="text" id="editCategory" name="editCategory" required>
+                        <button type="button" id="updateProductButton">Update Product</button>
+                    </form>
+                </div>
+            </div>
+        
+            <h2>Product List</h2>
+            <div id="productList"></div>
+            <button id="removeAllButton">Remove All Products</button>
+        </section>
+    </main>
+    <script src="/api/products/admin.js"></script>
+</body>
+</html>

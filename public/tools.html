@@ -4,139 +4,100 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tools</title>
-    <link rel="stylesheet" href="building.css">
-    <script src="scriptBuild.js"></script>
-    <script src="/server.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="/api/products/tools.js"></script>
+  
+
 </head>
 <body>
- <header class="header">
-    <h1 class="logo"><a href="index.html"><img class="logo" src="images/Screenshot 2024-05-20 204655.png" alt=""></a></h1>
-  <ul class="main-nav">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="#">Services</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Contact</a></li>
-  </ul>
-</header> 
-<h1 class="build">
-   Focus Tools
-</h1>
-<h3 class="tag">
-    NEED TOOLS WE GOT YOU
-</h3>
-<div class="bod">
-    <div class="busket"><div id="cart">
-        <h2>Your Cart</h2>
-        <ul id="cartItems"></ul>
-        <p id="totalPrice">Total: R0.00</p>
-        <button class="Ccart" onclick="clearCart()">Clear Cart</button>
-        <button class="Chec" onclick="checkout()">Continue to Checkout</button>
-    </div></div>
-    <div class="containerG">
-    <div class="group">
-        <div class="propi"><img class="propi" src="images/Screenshot 2024-05-25 121423.png" alt=""></div>
-        <h3 class="label">Ryobi</h3>
-        <h4 class="info">Compound Sliding Mitre Saw 2000W MS-255SCL</h4>
-        <h2 class="price">R4004.99</h2>
-        <button class="cartB" onclick="addToCart(this)">ADD TO CART</button>
+    <header class="header">
+        <h1 class="logo"><a href="index.html"><img class="logo" src="images/test.png" alt=""></a></h1>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search for products...">
+            <button onclick="searchProducts()">Search</button>
+        </div>
+        <ul class="main-nav">
+
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+    <div class="bod">
+        <div class="busket">
+            <div id="cart">
+                <h2>Your Cart</h2>
+                <ul id="cartItems"></ul>
+                <p id="totalPrice">Total: R0.00</p>
+                <button class="Ccart" onclick="clearCart()">Clear Cart</button>
+                <button class="Chec" onclick="checkout()">Continue to Checkout</button>
+            </div>
+        </div>
+
     </div>
-    <div class="group">
-        <div class="propi"><img class="propi" src="images/Screenshot 2024-05-25 121435.png" alt=""></div>
-        <h3 class="label">Dewalt Hammer Drill</h3>
-        <h4 class="info">18V (DCD796P2-QW)</h4>
-        <h2 class="price">R6999.99</h2>
-        <button class="cartB" onclick="addToCart(this)">ADD TO CART</button>
+    <h1 class="build">Lenovo</h1>
+    <h3 class="tag">New World New Thinking.</h3>
+    <div class="banner">
+        <img class="bannerImg" src="images/lenovoLapBann.jpg" alt="">
+        <div class="bannerInfo">All the latest Lenovo products with the best deals</div>
     </div>
-    <div class="group">
-        <div class="propi"><img class="propi" src="images/Screenshot 2024-05-25 121440.png" alt=""></div>
-        <h3 class="label">Dewalt Random Orbital Sander</h3>
-        <h4 class="info">280W DWE6423-QS</h4>
-        <h2 class="price">R2499.99</h2>
-        <button class="cartB" onclick="addToCart(this)">ADD TO CART</button>
+    <div class="grid-container">
+        <div class="grid-item">
+            <a href="lenovoLaptops.html"> 
+                           <img src="images/laptop (1).png" alt="Image 1">
+            <p>Lenovo Laptops</p></a>
+
+        </div>
+        <div class="grid-item"><a href="lenovoMonitor.html">           
+             <img src="images/monitor.png" alt="Image 2">
+            <p>Lenovo Monitor's</p></a>
+
+        </div>
+        <div class="grid-item"><a href="lenovoPC.html">       
+               <img src="images/case.png" alt="Image 3">
+            <p>PC BOX</p></a>
+  
+        </div>
     </div>
-    <div class="group">
-        <div class="propi"><img class="propi" src="images/Screenshot 2024-05-25 121456.png" alt=""></div>
-        <h3 class="label">Makita Angle Grinder</h3>
-        <h4 class="info"> 2200W GA9020</h4>
-        <h2 class="price">R2699.99</h2>
-        <button class="cartB" onclick="addToCart(this)">ADD TO CART</button>
-    </div>
-    <div class="group">
-        <div class="propi"><img class="propi" src="images/Screenshot 2024-05-25 121503.png" alt=""></div>
-        <h3 class="label">Ryobi Circular Saw</h3>
-        <h4 class="info">2400W W-2400</h4>
-        <h2 class="price">R2499.99</h2>
-        <button class="cartB" onclick="addToCart(this)">ADD TO CART</button>
-    </div>
-    <div class="group">
-        <div class="propi"><img class="propi" src="images/Screenshot 2024-05-25 121525.png" alt=""></div>
-        <h3 class="label">Ryobi SD Reciprocating Saw</h3>
-        <h4 class="info">Saw Multi Purpose 350W</h4>
-        <h2 class="price">R1199.99</h2>
-        <button class="cartB" onclick="addToCart(this)">ADD TO CART</button>
-    </div>
-    <div class="group">
-        <div class="propi"><img class="propi" src="images/Screenshot 2024-05-25 121539.png" alt=""></div>
-        <h3 class="label">Makita Impact Drill</h3>
-        <h4 class="info">710W (M8101B)</h4>
-        <h2 class="price">R1799.99</h2>
-        <button class="cartB" onclick="addToCart(this)">ADD TO CART</button>
-    </div>
-    <div class="group">
-        <div class="propi"><img class="propi" src="images/Screenshot 2024-05-25 121544.png" alt=""></div>
-        <h3 class="label">Makita Planer</h3>
-        <h4 class="info">500W M1901B</h4>
-        <h2 class="price">R2399.99</h2>
-        <button class="cartB" onclick="addToCart(this)">ADD TO CART</button>
-    </div>
-</div>
-</div>
-  <!--
-<form action="/checkout" method="POST">
-   Billing Address Fields -->
-  <!-- Payment Details Fields -->
-  <!-- Shipping Address Checkbox -->
-   <!-- <input type="submit" value="Continue to checkout">
-</form>
--->
-<div class="hline"></div>
+    <div id="productList" class="containerG"></div>
+
     <footer class="footer">
         <div class="container">
-         <div class="row">
-           <div class="footer-col">
-            <h4>CONTACT</h4>
-            <ul>
-              <li><a href="mailto:recipient@example.com?subject=Subject%20Here&body=Your%20Message%20Here">EMAIL</a></li>
-     
-           <div class="footer-col">
-             <h4>ABOUT</h4>
-             <ul>
-               <li><a href="#">WHO ARE WE</a></li>
-               <li><a href="#">WHY SHOP WITH US</a></li>
-               <li><a href="#">HISTORY</a></li>
-             </ul>
-           </div>
-           <div class="footer-col">
-             <h4>SERVICES</h4>
-             <ul>
-               <li><a href="#">DELIVERIES</a></li>
-               <li><a href="#">RETURN POLICY</a></li>
-               <li><a href="#">WARRANTY</a></li>
-              
-             </ul>
-           </div>
-           <div class="footer-col">
-             <h4>MTGT GROUP STORE</h4>
-             <div class="social-links">
-               <a href="#"><i class="fab fa-facebook-f"><img class="soci" src="images/facebook_1051309.png" alt=""></i></a>
-               <a href="#"><img src="images/linkedin_254394.png" alt="" class="soci"><i class="fab fa-twitter"></i></a>
-               <a href="#"><i class="fab fa-instagram"><img src="images/icons8-instagram-50.png" alt="" class="soci"></i></a>
-               <a href="#"><i class="fab fa-linkedin-in"><img src="images/video-play_9302291.png" alt="" class="soci"></i></a>
-             </div>
-           </div>
-         </div>
+            <div class="row">
+                <div class="footer-col">
+                    <h4>CONTACT</h4>
+                    <ul>
+                        <li><a href="mailto:recipient@example.com?subject=Subject%20Here&body=Your%20Message%20Here">EMAIL</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>ABOUT</h4>
+                    <ul>
+                        <li><a href="#">WHO ARE WE</a></li>
+                        <li><a href="#">WHY SHOP WITH US</a></li>
+                        <li><a href="#">HISTORY</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>SERVICES</h4>
+                    <ul>
+                        <li><a href="#">DELIVERIES</a></li>
+                        <li><a href="#">RETURN POLICY</a></li>
+                        <li><a href="#">WARRANTY</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>MTGT GROUP STORE</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"><img class="soci" src="images/facebook_1051309.png" alt=""></i></a>
+                        <a href="#"><img src="images/linkedin_254394.png" alt="" class="soci"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"><img src="images/icons8-instagram-50.png" alt="" class="soci"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"><img src="images/video-play_9302291.png" alt="" class="soci"></i></a>
+                    </div>
+                </div>
+            </div>
         </div>
-     </footer>
-</div>
+    </footer>
 </body>
 </html>
